@@ -43,8 +43,8 @@ srcdir = .
 #
 
 LD = /usr/bin/ld
-CC = gcc
-AR = ar
+CC = mips-gcc
+AR = mips-ar
 LN_S = ln -s
 MKDEP = 
 CCOPT =  -fpic
@@ -67,7 +67,7 @@ FULL_CFLAGS = $(CCOPT) $(INCLS) $(DEFS) $(CFLAGS)
 INSTALL = /usr/bin/install -c
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_DATA = ${INSTALL} -m 644
-RANLIB = ranlib
+RANLIB = mips-ranlib
 
 #
 # Flex and bison allow you to specify the prefixes of the global symbols
@@ -84,8 +84,8 @@ YACC = bison -y -p pcap_
 	@rm -f $@
 	$(CC) $(FULL_CFLAGS) -c $(srcdir)/$*.c
 
-PSRC =	pcap-linux.c pcap-usb-linux.c   pcap-can-linux.c pcap-netfilter-linux.c  
-FSRC =  fad-getad.c
+PSRC =	pcap-linux.c pcap-usb-linux.c   pcap-can-linux.c   
+FSRC =  fad-gifc.c
 SSRC =  
 CSRC =	pcap.c inet.c gencode.c optimize.c nametoaddr.c etherent.c \
 	savefile.c sf-pcap.c sf-pcap-ng.c pcap-common.c \

@@ -84,7 +84,7 @@
 #define HAVE_LINUX_IF_PACKET_H 1
 
 /* Define to 1 if you have the <linux/net_tstamp.h> header file. */
-#define HAVE_LINUX_NET_TSTAMP_H 1
+/* #undef HAVE_LINUX_NET_TSTAMP_H */
 
 /* Define to 1 if you have the <linux/sockios.h> header file. */
 #define HAVE_LINUX_SOCKIOS_H 1
@@ -168,7 +168,7 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the `strlcpy' function. */
-/* #undef HAVE_STRLCPY */
+#define HAVE_STRLCPY 1
 
 /* Define to 1 if the system has the type `struct BPF_TIMEVAL'. */
 /* #undef HAVE_STRUCT_BPF_TIMEVAL */
@@ -276,7 +276,7 @@
 /* #undef PCAP_SUPPORT_DBUS */
 
 /* target host supports netfilter sniffing */
-#define PCAP_SUPPORT_NETFILTER 1
+/* #undef PCAP_SUPPORT_NETFILTER */
 
 /* use Linux packet ring capture if available */
 #define PCAP_SUPPORT_PACKET_RING 1
@@ -302,10 +302,10 @@
 #endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */
-/* #undef _FILE_OFFSET_BITS */
+#define _FILE_OFFSET_BITS 64
 
 /* Define to 1 to make fseeko visible on some hosts (e.g. glibc 2.2). */
-/* #undef _LARGEFILE_SOURCE */
+#define _LARGEFILE_SOURCE 1
 
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */
